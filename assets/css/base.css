@@ -1,0 +1,45 @@
+/* B1: reset lai css cho cac the html */
+
+/* lớp giả root: biến toàn cục global */
+:root{
+    text-decoration: none;
+}
+
+*{
+    box-sizing: inherit;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-size: ;
+}
+
+.main{
+    width: 1222px;
+}
+
+.header{
+    height: 120px;
+    background-color: #F8492F;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-instagram{
+    flex-grow: 0.8;
+}
+
+.icon-profile{
+    width: 18px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #000;
+}
