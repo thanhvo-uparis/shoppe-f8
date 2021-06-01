@@ -1,0 +1,285 @@
+
+html{
+    font-family: Roboto, sans-serif;
+}
+
+.header{
+    height: 120px;
+    background-image: linear-gradient(0, #f6412e, #ff6433);
+}
+
+.header__navbar-list{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 300;
+    list-style: none;
+}
+
+.header__navbar-list-link--grow{
+    flex-grow: 0.8;
+    cursor: text !important;
+    opacity: 1 !important;
+}
+
+.header__navbar li{
+    padding: 15px 0px;
+}
+
+.header__navbar-list li,
+.header__navbar-list a{
+    color: #fff; 
+}
+
+.header__navbar-list a{
+    text-decoration: none;
+}
+
+.header__navbar-list-link--weidth{
+    font-weight: 500;
+}
+
+.header__navbar-list-item,
+.header__navbar-list-link{
+    position: relative;
+}
+
+.header__navbar-list-item:hover,
+.header__navbar-list-link:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header__navbar-list-item--separate::after,
+.header__navbar-list-link--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+}
+
+.header__navbar-icons{
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+
+.header__navbar-icons--navright{
+    width: 20px;
+    height: 20px;
+}
+
+/* partie QR-code */
+@keyframes showup{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.header__qrcode{
+    width: 187px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 5px);
+    display: none;
+}
+
+.header__qrcode-code{
+    width: 100%;
+    padding: 7px;
+}
+
+.header__qrcode-listapps{
+    width: 153px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.header__qrcode-listapps-apps{
+    width: 100%;
+}
+
+.header__qrcode-listapps-link + .header__qrcode-listapps-link{
+    margin-left: 12px;
+}
+
+.header__navbar-list-item--showcode:hover .header__qrcode{
+    display: block;
+    animation: showup ease 3s;
+}
+
+/* Phần quả chuông thông báo */
+.header__notifi{
+    width: 402px;
+    background-color: khaki;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+}
+
+.header__notifi-new{
+    height: 40px;
+    list-style: none;
+}
+
+.header_notifi-list li,
+.header_notifi-list a{
+    font-size: 14px;
+    color: #000;
+}
+
+.header_notifi-list li{
+    padding-left: 15px;
+}
+
+.header_notifi-items{
+    height: 72px;
+    display: flex;
+}
+
+.header_notifi-description-item{
+    flex-grow: 2;
+    padding-left: 13px;
+}
+
+.header_notifi-description-item h4,
+.header_notifi-description-item p{
+    opacity: 0.8;
+}
+
+.header_notifi-items p{
+    font-size: 12px;
+}
+
+.header_notifi-img{
+    width: 48px;
+}
+
+.header_notifi-img img{
+    width: 100%;
+}
+
+.header_notifi-allitems{
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__navbar-list-show-notifi:hover .header__notifi{
+    display: block;
+}
+
+
+/* Partie CSS Modal */
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(204, 204, 204, 0.5);
+    display: flex;
+}
+
+.modal__container{
+  width: 754px;
+  height: 427px;
+  background-color: #fff;
+  margin: auto auto;
+}
+
+.modal__container a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* .modal__body li{
+    list-style: none;
+}
+
+.modal__body-heading{
+    height: 91px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__body-seule,
+.modal__body-double{
+    height: 40px;
+}
+
+.modal__body-text{
+    height: 35px;
+    border-radius: 4px;
+}
+
+.modal__body-double-right{
+    display: flex;
+} */
+.modal__container-content{
+    padding: 0 25px;
+}
+
+.modal__heading{
+    font-size: 30px;
+    height: 126px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__heading h4,
+.modal__heading a{
+    font-weight: 400;
+}
+
+.modal__heading a{
+    color: var(--primary-color);
+}
+
+.modal__body-info{
+     height: 130px;
+}
+
+.modal__body-input{
+    display: block;
+    width: 100%;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 6px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.modal__body-input + .modal__body-input{
+    margin-top: 10px;
+}
+
+.modal__body-condition{
+       margin-top: 10px;
+}
+
+.modal-body-btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px;
+
+}
+
+.modal__socials{
+     display: flex;
+     justify-content: space-between;
+}
